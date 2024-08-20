@@ -1,0 +1,150 @@
+@prefix bg: <https://celldl.org/ontologies/bondgraph#> .
+@prefix bpc: <https://celldl.org/ontologies/BPC#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://celldl.org/ontologies/bondgraph> .
+
+<https://celldl.org/ontologies/bondgraph> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://celldl.org/ontologies/bondgraph#connects
+bg:connects rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain bg:PowerPort ;
+            rdfs:range bg:PowerBond .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasBondElement
+bg:hasBondElement rdf:type owl:ObjectProperty ;
+                  rdfs:domain bg:BondGraph ;
+                  rdfs:range bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasConstitutiveRelation
+bg:hasConstitutiveRelation rdf:type owl:ObjectProperty ;
+                           rdfs:domain bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasJunctionStructure
+bg:hasJunctionStructure rdf:type owl:ObjectProperty ;
+                        rdfs:domain bg:BondGraph ;
+                        rdfs:range bg:JunctionStructure .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasParameter
+bg:hasParameter rdf:type owl:ObjectProperty ;
+                rdfs:domain bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasPowerBond
+bg:hasPowerBond rdf:type owl:ObjectProperty ;
+                rdfs:domain bg:BondGraph ;
+                rdfs:range bg:PowerBond .
+
+
+###  https://celldl.org/ontologies/bondgraph#hasPowerPort
+bg:hasPowerPort rdf:type owl:ObjectProperty ;
+                rdfs:domain bg:BondElement ;
+                rdfs:range bg:PowerPort .
+
+
+###  https://celldl.org/ontologies/bondgraph#isPortOf
+bg:isPortOf rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain bg:PowerPort .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://celldl.org/ontologies/bondgraph#effort
+bg:effort rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain bg:PowerBond .
+
+
+###  https://celldl.org/ontologies/bondgraph#flow
+bg:flow rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain bg:PowerBond .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://celldl.org/ontologies/BPC#Block
+bpc:Block rdf:type owl:Class .
+
+
+###  https://celldl.org/ontologies/BPC#Connector
+bpc:Connector rdf:type owl:Class .
+
+
+###  https://celldl.org/ontologies/BPC#Port
+bpc:Port rdf:type owl:Class .
+
+
+###  https://celldl.org/ontologies/bondgraph#BondElement
+bg:BondElement rdf:type owl:Class ;
+               rdfs:subClassOf bpc:Block ;
+               owl:disjointWith bg:JunctionStructure .
+
+
+###  https://celldl.org/ontologies/bondgraph#BondGraph
+bg:BondGraph rdf:type owl:Class .
+
+
+###  https://celldl.org/ontologies/bondgraph#DissapativeBondElement
+bg:DissapativeBondElement rdf:type owl:Class ;
+                          rdfs:subClassOf bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#JunctionStructure
+bg:JunctionStructure rdf:type owl:Class ;
+                     rdfs:subClassOf bpc:Block .
+
+
+###  https://celldl.org/ontologies/bondgraph#MultiplierJunctionStructure
+bg:MultiplierJunctionStructure rdf:type owl:Class ;
+                               rdfs:subClassOf bg:JunctionStructure .
+
+
+###  https://celldl.org/ontologies/bondgraph#OneJunctionStructure
+bg:OneJunctionStructure rdf:type owl:Class ;
+                        rdfs:subClassOf bg:JunctionStructure .
+
+
+###  https://celldl.org/ontologies/bondgraph#PowerBond
+bg:PowerBond rdf:type owl:Class ;
+             rdfs:subClassOf bpc:Connector .
+
+
+###  https://celldl.org/ontologies/bondgraph#PowerPort
+bg:PowerPort rdf:type owl:Class ;
+             rdfs:subClassOf bpc:Port .
+
+
+###  https://celldl.org/ontologies/bondgraph#SourceBondElement
+bg:SourceBondElement rdf:type owl:Class ;
+                     rdfs:subClassOf bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#StorageBondElement
+bg:StorageBondElement rdf:type owl:Class ;
+                      rdfs:subClassOf bg:BondElement .
+
+
+###  https://celldl.org/ontologies/bondgraph#ZeroJunctionStructure
+bg:ZeroJunctionStructure rdf:type owl:Class ;
+                         rdfs:subClassOf bg:JunctionStructure .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
