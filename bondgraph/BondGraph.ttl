@@ -1,5 +1,6 @@
 @prefix bg: <https://celldl.org/ontologies/bondgraph#> .
 @prefix bpc: <https://celldl.org/ontologies/BPC#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,7 +8,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://celldl.org/ontologies/bondgraph> .
 
-<https://celldl.org/ontologies/bondgraph> rdf:type owl:Ontology .
+<https://celldl.org/ontologies/bondgraph> rdf:type owl:Ontology ;
+                                          dcterms:title "A Bond-Graph Metamodel" .
 
 #################################################################
 #    Object Properties
