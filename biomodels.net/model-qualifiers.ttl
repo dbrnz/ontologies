@@ -1,4 +1,4 @@
-@prefix : <http://biomodels.net/model-qualifiers/> .
+@prefix bqmodel: <http://biomodels.net/model-qualifiers/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -14,23 +14,23 @@
 
 
 ### http://biomodels.net/model-qualifiers/is
-:is rdf:type owl:ObjectProperty ;
+bqmodel:is rdf:type owl:ObjectProperty ;
     rdfs:comment "The modelling object represented by the model element is identical with the subject of the referenced resource (modelling object B). For instance, this qualifier might be used to link an encoded model to a database of models." .
 
 ### http://biomodels.net/model-qualifiers/isDerivedFrom
-:isDerivedFrom rdf:type owl:ObjectProperty ;
+bqmodel:isDerivedFrom rdf:type owl:ObjectProperty ;
     rdfs:comment "The modelling object represented by the model element is derived from the modelling object represented by the referenced resource (modelling object B). This relation may be used, for instance, to express a refinement or adaptation in usage for a previously described modelling component." .
 
 ### http://biomodels.net/model-qualifiers/isInstanceOf
-:isInstanceOf rdf:type owl:ObjectProperty ;
+bqmodel:isInstanceOf rdf:type owl:ObjectProperty ;
     rdfs:comment "The modelling object represented by the model element is an instance of the subject of the referenced resource (modelling object B). For instance, this qualifier might be used to link a specific model with its generic form." .
 
 ### http://biomodels.net/model-qualifiers/hasInstance
-:hasInstance rdf:type owl:ObjectProperty ;
+bqmodel:hasInstance rdf:type owl:ObjectProperty ;
     rdfs:comment "The modelling object represented by the model element has for instance (is a class of) the subject of the referenced resource (modelling object B). For instance, this qualifier might be used to link a generic model with its specific forms." .
 
 ### http://biomodels.net/model-qualifiers/isDescribedBy
-:isDescribedBy rdf:type owl:ObjectProperty ;
+bqmodel:isDescribedBy rdf:type owl:ObjectProperty ;
     rdfs:comment "The modelling object represented by the model element is described by the subject of the referenced resource (modelling object B). This relation might be used to link a model or a kinetic law to the literature that describes it." .
 
 
