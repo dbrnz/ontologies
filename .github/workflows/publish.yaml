@@ -43,7 +43,7 @@ jobs:
           python-version: '3.13'
           cache: 'pip'
 
-      - name: Install packages (pylode)
+      - name: Install packages
         run: pip install -r requirements.txt
 
       - name: Generate ontologies
@@ -52,6 +52,7 @@ jobs:
           pylode -o docs/biomodels-model-qualifiers biomodels.net/model-qualifiers.ttl
           pylode -o docs/bondgraph bondgraph/BondGraph.ttl
           pylode -o docs/libbondgraph bondgraph/LibBondGraph.ttl
+          markdown2 README.md > docs/index.html
 
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
