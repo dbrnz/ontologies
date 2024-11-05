@@ -9,6 +9,7 @@
 @base <https://celldl.org/ontologies/bondgraph> .
 
 <https://celldl.org/ontologies/bondgraph> rdf:type owl:Ontology ;
+                                          dcterms:source <https://doi.org/10.1007/978-3-030-40914-2_5> ;
                                           dcterms:title "A Bond-Graph Metamodel" .
 
 #################################################################

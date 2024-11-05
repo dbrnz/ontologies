@@ -8,6 +8,7 @@
 @base <http://biomodels.net/biology-qualifiers/> .
 
 <http://biomodels.net/biology-qualifiers/> rdf:type owl:Ontology ;
+                                           dcterms:source <https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#biology-qualifiers> ;
                                            dcterms:title "BioModels.net Biology Qualifiers" ;
                                            rdfs:comment "These kind of qualifiers define the relationship between a biological object represented by a model element and its annotation." .
 
