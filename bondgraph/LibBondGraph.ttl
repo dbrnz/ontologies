@@ -11,7 +11,7 @@
 @base <https://celldl.org/ontologies/libbondgraph> .
 
 <https://celldl.org/ontologies/libbondgraph> rdf:type owl:Ontology ;
-                                             dcterms:title "An Ontology for LibBondGraph" .
+                                             dcterms:title "An Ontology for libBondGraph" .
 
 #################################################################
 #    Object Properties
