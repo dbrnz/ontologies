@@ -33,6 +33,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        run: |
+          git submodule init
+          git submodule update
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -51,7 +54,7 @@ jobs:
           pylode -o docs/biomodels-biology-qualifiers biomodels.net/biology-qualifiers.ttl
           pylode -o docs/biomodels-model-qualifiers biomodels.net/model-qualifiers.ttl
           pylode -o docs/bondgraph bondgraph/BondGraph.ttl
-          pylode -o docs/libbondgraph bondgraph/LibBondGraph.ttl
+          pylode -o docs/bondgraph-framework BG-RDF/schema/ontology.ttl
           markdown2 README.md > docs/index.html
 
       - name: Upload static files as artifact
