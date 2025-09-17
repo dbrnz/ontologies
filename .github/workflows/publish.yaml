@@ -55,6 +55,7 @@ jobs:
         run: |
           pylode -o docs/biomodels-biology-qualifiers biomodels.net/biology-qualifiers.ttl
           pylode -o docs/biomodels-model-qualifiers biomodels.net/model-qualifiers.ttl
+          pylode -o docs/ontology-physics-for-biology OPB/ontology_physics_for_biology.ttl
           pylode -o docs/bondgraph bondgraph/BondGraph.ttl
           pylode -o docs/bondgraph-framework BG-RDF/schema/ontology.ttl
           markdown2 README.md > docs/index.html
